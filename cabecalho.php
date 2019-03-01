@@ -3,6 +3,7 @@
 <head>
 	<title>cadastro</title>
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="bootstrap/css/loja.css" rel="stylesheet" />
 </head>
 <body>
 	<div class= "navbar navbar navbar-dark bg-dark navbar-inverse">
@@ -21,4 +22,4 @@
      </div>
 
 	<div class="container">
-		<div style="padding:40px 50px; text-align: center;">
+		<div class="principal">
