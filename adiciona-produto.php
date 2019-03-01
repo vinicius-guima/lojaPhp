@@ -4,10 +4,11 @@
 <?php include("cabecalho.php")?>
 <?php
 
-$nome = $_GET ["nome"];
-$preco = $_GET["preco"];
+$nome = $_POST ["nome"];
+$preco = $_POST["preco"];
+$descricao = $_POST["descricao"];
 
-if(salvaProduto($conexao, $nome, $preco)){
+if(salvaProduto($conexao, $nome, $preco, $descricao)){
 ?>
   <p class="text-success"><?= $nome ?> de <?=$preco?> R$ adicionado com sucesso!</p>
 <?php

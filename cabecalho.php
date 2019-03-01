@@ -3,9 +3,10 @@
 <head>
 	<title>cadastro</title>
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-		<link href="bootstrap/css/loja.css" rel="stylesheet" />
+<!--<link href="bootstrap/css/loja.css" rel="stylesheet" />  com esse link  a nav nap encosta em cima --->
 </head>
 <body>
+
 	<div class= "navbar navbar navbar-dark bg-dark navbar-inverse">
          <div class="container">
              <div class="navbar-header">
@@ -22,4 +23,4 @@
      </div>
 
 	<div class="container">
-		<div class="principal">
+		<div style="padding: 40px 15px; text-align: center;"> <!-- atributos do loja.css -->
