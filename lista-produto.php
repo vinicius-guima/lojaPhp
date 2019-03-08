@@ -1,5 +1,6 @@
 <?php include("banco-produtos.php") ?>
 <?php include("cabecalho.php") ?>
+<?php include("banco-categorias.php") ?>
 
 <?php
       if (array_key_exists("removido", $_GET) && $_GET['removido'] == true) {
@@ -18,6 +19,7 @@ $produtos = listaProdutos($conexao);
     <th scope="col">Nome</th>
     <th scope="col">Preço</th>
     <th scope="col">Descrição</th>
+    <th scope="col">Categoria</th>
     <th scope="col">Apagar?</th>
   </tr>
 
@@ -26,9 +28,10 @@ foreach($produtos as $produto) :
 ?>
 
     <tr>
-        <td><?=$produto['nome'] ?></td>
-        <td><?=$produto['preco'] ?></td>
+        <td><?=$produto['nome']?></td>
+        <td><?=$produto['preco']?></td>
         <td><?=substr($produto['descricao'],0,20) ?></td>
+        <td><?=$produto['categoria_id']?></td>
         <td><form action="remove-produto.php" method="post">
           <input type="hidden" name="id" value="<?=$produto['id']?>">
           <button class="btn btn-outline-danger">Remover</button>
