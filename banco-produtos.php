@@ -12,8 +12,10 @@ function listaProdutos($conexao){
       return $produtos;
 }
 
- function salvaProduto ($conexao, $nome, $preco, $descricao, $categoria_id){
-     $sqlquery = "insert into produtos (nome, preco, descricao, categoria_id) values ('{$nome}',{$preco}, '{$descricao}',{$categoria_id})";
+ function salvaProduto ($conexao, $nome, $preco, $descricao, $categoria_id, $usado){
+     $sqlquery = "insert into produtos (nome, preco, descricao, categoria_id, usado)
+                        values ('{$nome}',{$preco}, '{$descricao}',{$categoria_id}, {$usado})";
+    echo $sqlquery;
      return mysqli_query($conexao, $sqlquery);
  }
 
