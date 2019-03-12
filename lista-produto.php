@@ -20,6 +20,7 @@ $produtos = listaProdutos($conexao);
     <th scope="col">Preço</th>
     <th scope="col">Descrição</th>
     <th scope="col">Categoria</th>
+    <th scope="col">Alterar?</th>
     <th scope="col">Apagar?</th>
   </tr>
 
@@ -32,6 +33,7 @@ foreach($produtos as $produto) :
         <td><?=$produto['preco']?></td>
         <td><?=substr($produto['descricao'],0,20) ?></td>
         <td><?=$produto['categoria_id']?></td>
+        <td><a class="btn btn-outline-primary" href="altera-produto-form.php?id=<?=$produto['id']?>">Alterar</a></td>
         <td><form action="remove-produto.php" method="post">
           <input type="hidden" name="id" value="<?=$produto['id']?>">
           <button class="btn btn-outline-danger">Remover</button>
